@@ -1,0 +1,106 @@
+body{
+    margin: 0px;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+}
+#title{
+    width: 1024px;
+    height: 50px;
+    text-align: center;
+    border-bottom: solid 1px gray;
+}
+#title span{
+    display: inline-block;
+    margin-top: 10px;
+    color: gray;
+    font-size: 25px;
+}
+#userManagerContian{
+    width: 1024px;
+    height: 800px;
+    margin: auto;
+}
+#managerList{
+    width: 1024px;
+    height: 60px;
+
+}
+#managerList li{
+    float: left;
+    line-height: 60px;
+    margin-left: 50px;
+}
+#managerList a{
+    color: brown;
+    padding: 10px;
+}
+#managerList a:hover{
+    background-color: honeydew;
+}
+#userInfoContian{
+    width: 1024px;
+    height: 800px ;
+}
+#userImg{
+    width: 200px;
+    height: 250px;
+    margin-left: 400px;
+}
+#userImg span{
+    display: inline-block;
+    height: 20px;
+}
+
+.userInput{
+    width: 500px;
+    height: 50px;
+    margin-left: 350px;
+    margin-top: 10px;
+}
+.userInput input{
+
+    width: 200px;
+    height: 30px;
+}
+#submitUser{
+    width: 1024px;
+    height: 100px;
+}
+#submitUser1{
+    width: 70px;
+    height: 45px;
+    border: solid 1px red;
+    float: left;
+    text-align: center;
+    margin-left: 470px;
+    background-color: red;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+#submitUser1 a{
+    color: white;
+    display: inline-block;
+    padding: 15px;
+
+}
+#submitUser2{
+    width: 100px;
+    height: 45px;
+    border: solid 1px red;
+    float: left;
+    text-align: center;
+    background-color: red;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-top: 30px;
+
+}
+#submitUser2 a{
+    color: white;
+    display: inline-block;
+    padding: 15px;
+}

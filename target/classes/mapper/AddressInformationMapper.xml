@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.book.mapper.AddressInformationMapper">
+		<resultMap type="com.book.dto.AddressInformation" id="AddressInformationMap">
+		<id property="goodsAddressId" column="goods_address_id"></id>
+		<result property="goodsName" column="goods_name"/>
+		<result property="goodsTel" column="goods_tel"/>
+		<result property="postId" column="Post_id"/>
+		<result property="detaAddress" column="Deta_Address"/>
+		<result property="userId" column="user_id"/>
+		<association property="city" column="address_id">
+			<id property="addressId" column="address_id"/>
+			<result property="addressFatherName" column="address_father_name"/>
+			<result property="addressName" column="address_Name"/>
+		</association>
+		</resultMap>
+		<insert id="insertAddress" parameterType="com.book.dto.AddressInformation">
+		
+			insert into address_information(user_id,address_id,goods_name,goods_tel,post_id,deta_address)
+		
+			values(#{userId},#{addressId},#{goodsName},#{goodsTel},#{postId},#{detaAddress})
+		
+		</insert>
+		
+		<update id="updataAdd" parameterType="com.book.dto.AddressInformation">
+		
+			update address_information set goods_name=#{goodsName} ,
+			goods_tel=#{goodsTel},post_id=#{postId},deta_address=#{detaAddress},address_id=#{addressId}
+			where goods_address_id = #{goodsAddressId}
+		
+		</update>
+		
+		<delete id="deleteAddById" parameterType="com.book.dto.AddressInformation">
+		
+				delete from address_information where goods_address_id = #{goodsAddressId}
+		
+		</delete>
+		<select id="selectNextId" resultType="java.lang.Integer">
+			select max(goods_address_id) from address_information
+		</select>
+		
+		<select id="selectAddress"  resultType="com.book.dto.Common" parameterType="com.book.dto.AddressInformation">
+		 select ai.*,c.address_father_name,c.address_name from address_information ai , city c  
+		 where c.address_id=ai.address_id
+		<if test="userId!=null">
+			and ai.user_id = #{userId}
+		</if>
+		<if test="goodsAddressId!=null">
+			and ai.goods_address_id = #{goodsAddressId}
+		</if>
+		
+		
+		
+		</select>
+</mapper>

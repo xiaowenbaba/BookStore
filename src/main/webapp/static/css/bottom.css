@@ -1,0 +1,125 @@
+#BottomIntroduction{
+    width: 100%;
+    height: 400px;
+    background-color: white;
+}
+#BottomIntroductionCon{
+    width: 1024px;
+    height: 400px;
+    margin: auto;
+}
+#bottomIntroductionTop{
+    width: 1024px;
+    height: 150px;
+}
+#bottomIntroductionTop1{
+    width: 1024px;
+    height: 47px;
+}
+.bottomImg{
+    float: right;
+    margin-right: 8px;
+}
+#bottomIntroductionMiddle{
+    width: 1024px;
+    height: 200px;
+    border-bottom: 1px solid grey;
+}
+.bottomMiddle{
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+.bottomMiddleUL1{
+    margin-top: 20px;
+    padding: 0px;
+}
+.bottomMiddleUL1 a{
+    color: gray;
+}
+.bottomMiddleULA{
+    font-size: 20px;
+    color: gray;
+}
+#bottomIntroductionBottom{
+    width: 1024px;
+    height: 150px;
+}
+#BottomLeft{
+    width: 400px;
+    height: 100px;
+    float: left;
+}
+#BottomLeft a{
+    color: gray;
+    line-height: normal;
+}
+#BottomLeft li{
+   float: left;
+    padding-left: 10px;
+}
+#BottomRight{
+    width: 600px;
+    height: 100px;
+    float: left;
+}
+#BottomRightIMG {
+    float: left;
+}
+#BottomRightIMG1{
+    float: left;
+}
+#BottomRightIMG1 img{
+    margin-left: 150px;
+    margin-top: 8px;
+}
+#BottomRightIMG{
+    margin-top: 10px;
+}
+#BottomRightIMG a{
+    font-size: 20px;
+    color: #009B72;
+
+}
+#BottomRightIMG1 a{
+    font-size: 20px;
+    color: #009B72;
+}
+ #showPicture{
+            width: 100%;
+            height: 500px;
+            background-color: #EDEDED;
+        }
+        #showPictureContain{
+            width: 1024px;
+            height: 300px;
+            background-color: ;
+            margin:auto;
+
+        }
+        #Picture1{
+            width: 256px;
+            height: 300px;
+            float: left;
+
+        }
+        #Picture2{
+            width: 256px;
+            height: 300px;
+            float: left;
+
+        }
+        #Picture3{
+            width: 256px;
+            height: 300px;
+            float: left;
+
+        }
+        #Picture4{
+            width: 256px;
+            height: 300px;
+            float: left;
+        }
+        
+        #foot{width: 1349px;height: 65px;}
+#foot>p{text-align: center;font-size: 12px;color: #878B8A}

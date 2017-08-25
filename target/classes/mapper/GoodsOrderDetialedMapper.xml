@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.book.mapper.GoodsOrderDetialedMapper">
+	<insert id="insertDetial" parameterType="com.book.dto.GoodsOrderDetialed">
+	
+	insert into goods_order_detialed(book_id,order_id,order_num,price)
+	
+		values(#{bookId},#{orderId},#{orderNum},#{price})
+	
+	</insert>
+	<select id="selectByOrderId" parameterType="com.book.dto.GoodsOrderDetialed" resultType="com.book.dto.Common">
+	
+	select bi.*,good_order_id,order_num from goods_order_detialed god , book_information bi where bi.book_id = god.book_id and order_id=#{orderId}
+	
+	</select>
+</mapper>

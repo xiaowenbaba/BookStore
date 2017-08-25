@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.book.mapper.CityMapper">
+
+	<select id="selectCity" parameterType="com.book.dto.City" resultType="com.book.dto.City">
+		select * from city where 1=1
+		<if test="addressFatherName==null">
+			and address_father_name is null
+		</if>	
+		<if test="addressFatherName!=null">
+			and address_father_name = #{addressFatherName};
+		</if>
+	</select>
+	
+	<select id="selectFatherCity" parameterType="com.book.dto.City" resultType="com.book.dto.City">
+		 select * from city where  address_id = #{addressFatherName}
+	</select>
+	
+</mapper>

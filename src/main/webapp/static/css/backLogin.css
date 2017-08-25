@@ -1,0 +1,71 @@
+#loginContain{
+    width: 1024px;
+    height: 600px;
+    margin: auto;
+    background-color: skyblue;
+}
+a{
+    text-decoration: none;
+    }
+#title{
+    width: 1024px;
+    text-align: center;
+    height: 200px;
+}
+#title span{
+    font-size: 30px;
+    display: inline-block;
+    margin-top: 100px;
+    margin-right:50px ;
+    color: #1E6658;
+}
+#Messege{
+    width: 1024px;
+    height: 400px;
+}
+#login{
+    width: 500px;
+    height: 400px;
+    margin: auto;
+}
+#top{
+    width: 500px;
+    height: 100px;
+}
+
+#top input{
+        width: 250px;
+        height: 40px;
+}
+#top span{
+    display: inline-block;
+    margin-left: 60px;
+}
+#middle{
+    width: 500px;
+    height: 100px;
+}
+#middle span{
+    display: inline-block;
+    margin-left: 60px;
+}
+#middle input{
+    width: 250px;
+    height: 40px;
+}
+#bottom{
+    width:250px;
+    height: 51px;
+    background-color: #1E6658;
+    text-align: center;
+    margin-left: 135px;
+}
+#bottom a{
+    color: white;
+    display: inline-block;
+    padding-left: 107px;
+    padding-right: 107px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+

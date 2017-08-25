@@ -1,0 +1,36 @@
+#modifyContain{
+    width: 1024px;
+    height: 500px;
+    background-color: lightcyan;
+
+}
+#modifyTitle{
+    width: 800px;
+    height: 80px;
+    text-align: center;
+
+}
+#modifyTitle span{
+    font-size: 25px;
+}
+#modify{
+    width: 1024px;
+    height: 450px;
+}
+.modifyDiv{
+    width: 500px;
+    height: 50px;
+    margin: auto;
+}
+.modifyDiv input{
+    width: 200px;
+    height: 25px;
+}
+.modifyDiv a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 12px;
+    background-color: #1E6658;
+    color: white;
+
+}

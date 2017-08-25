@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.book.mapper.BookInformationMapper">
+	<select id="selectAllBookByPage" parameterType="java.util.HashMap" resultType="com.book.dto.BookInformation">
+		select bi.book_id ,bi.ISBN_id,bi.book_name,bi.book_author,bi.book_price,bi.book_Selling,bi.book_storage,bi.Book_publish,bi.book_picture,bi.book_degree ,bi.book_type_id ,bi.book_property from  book_information  bi , book_type bt  where  bt.book_type_id = bi.book_type_id
+		
+		<if test="bookInformation.bookName!=null and !&quot;&quot;.equals(bookInformation.bookName.trim())">
+			and bi.book_name like CONCAT('%', CONCAT(#{bookInformation.bookName}, '%'))
+		</if>
+		<if test="bookInformation.bookTypeId!=null">
+	    	and bi.book_type_id = #{bookInformation.bookTypeId} 
+	    </if>
+	    <if test="bookInformation.bookId!=null">
+	    	and bi.book_id = #{bookInformation.bookId} 
+	    </if>
+	    <if test="bookInformation.bookAuthor!=null and !&quot;&quot;.equals(bookInformation.bookAuthor.trim())">
+			and bi.book_author like CONCAT('%', CONCAT(#{bookInformation.bookAuthor}, '%'))
+		</if>
+		<if test="bookInformation.bookProperty!=null and !&quot;&quot;.equals(bookInformation.bookProperty.trim())">
+			and bi.book_property like CONCAT('%', CONCAT(#{bookInformation.bookProperty}, '%'))
+		</if>
+	</select>
+	<select id="selectById" resultType="com.book.dto.BookInformation" parameterType="com.book.dto.BookInformation">
+	select book_id ,ISBN_id,book_name,book_author,book_price,book_Selling,
+	book_storage,Book_publish,book_picture,
+	book_degree ,book_type_id ,book_property from  book_information    where book_id=#{bookId}
+	</select>
+	
+	
+	
+	<update id="backUpdateBook" parameterType="com.book.dto.BookInformation">
+	
+	update book_information set book_property =#{bookProperty}, Book_publish=#{bookPublish},book_storage=#{bookStorage},
+	book_name=#{bookName},book_author=#{bookAuthor},book_Selling=#{bookSelling} where book_id=#{bookId}
+	
+	
+	</update>
+	
+	
+	
+	<select id="selectType" resultType="com.book.dto.BookType">
+	select book_type_id,book_type_name from book_type;
+	</select>
+	
+	
+	
+	<select id="selectTypeByPage" resultType="com.book.dto.BookType" parameterType="java.util.HashMap"> 
+		select book_type_id,book_type_name from book_type where 1=1
+		
+	    <if test="bookType.bookTypeName!=null and !&quot;&quot;.equals(bookType.bookTypeName.trim())">
+			and book_type_name like CONCAT('%', CONCAT(#{bookType.bookTypeName}, '%'))
+		</if>
+		
+		<if test="bookType.bookTypeId!=null">
+			and book_type_id = #{bookType.bookTypeId}
+		</if>
+		
+	</select>
+	
+	<insert id="backBookTypeInsert" parameterType="com.book.dto.BookType">
+		
+     insert  into 	book_type (book_type_name) values(#{bookTypeName})
+ 	
+	
+	</insert>
+	
+	
+	<insert id="backBookInsert" parameterType="com.book.dto.BookInformation">
+	
+	insert into 
+	book_information(book_name,book_author,book_property,Book_publish,book_storage,book_Selling,ISBN_Id,Book_type_id,book_price,book_degree)
+	 values(#{bookName},#{bookAuthor},#{bookProperty},#{bookPublish},#{bookStorage},#{bookSelling},#{isbnId},#{bookTypeId},#{bookPrice},#{bookDegree})
+	
+	</insert>
+	
+	
+	
+	
+</mapper>

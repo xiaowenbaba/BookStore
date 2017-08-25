@@ -1,0 +1,41 @@
+#orderManegerContian{
+    width: 1024px;
+    height :700px;
+    margin: auto;
+}
+#orderContian{
+}
+.orderList{
+    width: 1024px;
+    height: 80px;
+    background-color: bisque;
+}
+.orderId{
+    width: 200px;
+    height: 80px;
+    text-align: center;
+}
+#Order_title{
+    width: 1024px;
+    height: 50px;
+    border-bottom: solid 1px gray;
+}
+#Order_title li{
+    float: left;
+    margin-left: 90px;
+}
+.orderListDiv{
+    width: 150px;
+    height: 50px;
+    float: left;
+    text-align: center;
+}
+.orderListDiv span{
+    display: inline-block;
+    margin-top: 20px;
+}
+.orderListDiv a{
+    display: inline-block;
+    margin-top: 20px;
+    color: olivedrab;
+}

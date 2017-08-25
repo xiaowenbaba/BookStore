@@ -1,0 +1,273 @@
+body{
+    margin: 0px;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+}
+#shoppingCar {
+    width: 1024px;
+    margin:auto;
+}
+#top{
+    width: 1024px;
+    height: 40px;
+}
+
+#top span{
+    line-height: 40px;
+}
+.top1{
+    width: 200px;
+    height: 60px;
+    background-color: #7B7B7B;
+    float: left;
+    margin-left: 80px;
+    text-align: center;
+    background-color: #F6F6F6;
+    border-radius: 8px;
+}
+
+#cars_title{
+    width: 1024px;
+    height: 58px;
+    background-color: white;
+    border-bottom: solid #E2E2E2 1px;
+}
+#cars_title ul{
+    padding-left: 20px;
+    padding-top: 17px;
+}
+#cars_title li{
+    float: left;
+}
+#cars_title_first{
+    width: 175px;
+}
+#cars_title_first input {
+    margin-right: 10px;
+}
+#cars_title_second {
+    width:400px;
+    height:21px ;
+}
+#cars_title_third {
+    width:124px;
+    height:21px ;
+    text-align: center;
+}
+#cars_title_fouth {
+    width:130px;
+    height:21px ;
+    text-align: center;
+}
+#cars_title_fivth {
+    width:120px;
+    height:21px ;
+    text-align: center;
+}
+
+#cars_content{
+    border: solid #FFFFFF 1px;
+    background: linear-gradient(to bottom,#fafafa 0,#fff 100%);
+}
+#cars_content>h2{
+    margin: 0px;
+}
+#cars_content a{
+    color: #2AAD6F;
+}
+#cars_content_wrap{
+    width:960px;
+
+    margin-left: 32px;
+    margin-top: 32px;
+}
+#cars_content_body{
+    width:960px;
+    height: 240px;
+    margin-left: 32px;
+
+    border-bottom:solid #CCCCCC 1px;
+}
+#cars_content_body_box{
+    height: 120px;
+
+    position: relative;
+    top: 70px;
+}
+#goodspicture{
+    width: 155px;
+    height: 120px;
+}
+#goodspicture>input{
+    position: relative;
+    top:-107px;
+}
+#goodsInfo{
+    width:800px;
+    height: 50px;
+    float: right;
+}
+#goodsInfo>ul{
+    float: left;
+    margin: 0px;
+    padding: 0px;
+}
+#goodsInfo_introduce{
+    width:400px;
+    height:50px;
+    line-height: 50px;
+    text-align: left;
+    display: inline-block;
+    float: left;
+}
+#goods_count{
+    width:124px;
+    height: 50px;
+    border: solid black 1px;
+    float: left;
+}
+#goods_count_box{
+    width:124px;
+    height: 50px;
+    display: inline-block;
+}
+#goods_count_box>a{
+    display: inline-block;
+    width: 29px;
+    height: 50px;
+    float: left;
+    text-align: center;
+}
+.top{
+    position: relative;
+    top: 15px;
+}
+.top1{
+    position: relative;
+    top: 5px;
+    height: 40px;
+    background-color: #FCFCFC;
+}
+
+.top2{
+    position: relative;
+    top: 15px;
+}
+#goods_count_box>div{
+    width:62px;
+    height: 50px;
+    float: left;
+    cursor: text;
+}
+#goods_count_box>div>input{
+    width:20px;
+    margin-left: 25px;
+    border: none;
+}
+#goods_price{
+    width:130px;
+    height: 50px;
+    float: left;
+    text-align: center;
+    line-height: 50px;
+}
+#goods_delete{
+    width:120px;
+    height: 50px;
+    float: left;
+    text-align: center;
+    line-height: 50px;
+    font-size: 17px;
+}
+
+#cars_total{
+    width: 1024px;
+    height: 121px;
+    background-color: white;
+
+}
+#cars_total_wrap{
+    width:960px;
+    height:80px;
+    margin-left: 32px;
+    border-bottom:solid #CCCCCC 1px;
+    position: relative;
+    top:32px;
+}
+#cars_total_wrap>ul{
+    margin: 0px;
+}
+#cars_total_wrap>ul>li{
+    text-align: right;;
+}
+#total_first{
+    margin-right: 100px;
+
+}
+
+#total_second{
+    margin-right: 100px;
+
+}
+#total_second span{
+    color: gold;
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 22px;
+}
+#fnum{
+    position: relative;
+    left:90px;
+}
+#totalprice{
+    position: relative;
+    left:80px;
+}
+
+#cars_bottom{
+    width:1024px;
+    height: 120px;
+    background-color: white;
+}
+#cars_bottom_left{
+    line-height: 120px;
+    float: left;
+}
+#cars_bottom_left a{
+    color: #2AAD6F;
+    margin-left: 20px;
+}
+#cars_bottom_right{
+    width:114px;
+    height: 60px;
+    float: right;
+    margin-right: 35px;
+    margin-top: 20px;
+    border: none;
+}
+#cars_bottom_right>input{
+    width:112px;
+    height: 60px;
+    background-color: #FE1E1E;
+    color: white;
+    font-size: 17px;
+    display: inline-block;
+    text-align: center;
+    line-height: 60px;
+    cursor: pointer;
+}
+#cars_bottom_right>input:HOVER{
+    background-color: red;
+}
+
+.total{
+    text-align: center;
+    float: right;
+}
+
+#foot{width: 1349px;height: 65px;}
+#foot>p{text-align: center;font-size: 12px;color: #878B8A}

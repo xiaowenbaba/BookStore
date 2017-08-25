@@ -1,0 +1,83 @@
+#successPay{
+    width: 1024px;
+    height: 500px;
+    margin: auto;
+}
+body{
+    margin: 0px;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+}
+
+#top{
+    width: 1024px;
+    height: 40px;
+}
+
+#top span{
+    line-height: 40px;
+}
+.top1{
+    width: 200px;
+    height: 40px;
+    background-color: #7B7B7B;
+    float: left;
+    margin-left: 80px;
+    text-align: center;
+    background-color: #F6F6F6;
+    border-radius: 8px;
+}
+
+#orderMessage{
+    width: 1024px;
+    height:  500px;
+}
+#orderId{
+    width: 1024px;
+    height: 200px;
+    text-align: center;
+    border-bottom: solid 1px gray;
+}
+#orderId span{
+    font-size: 25px;
+    display: inline-block;
+    margin-top: 100px;
+}
+#orderId a{
+    color: red;
+    font-size: 25px;
+}
+#payFor{
+    width: 1024px;
+    height: 150px;
+    border-bottom: solid 1px  gray;
+    text-align: center;
+}
+#payFor span{
+    display: inline-block;
+    margin-top: 50px;
+    color: red;
+    font-size: 35px;
+}
+#payOnline{
+    width: 100px;
+    height: 50px;
+    border: solid 1px red;
+    border-radius: 7px;
+    text-align: center;
+    background-color: red;
+    float: right;
+    margin-top: 50px;
+    margin-right: 20px;
+}
+#payOnline a{
+    display: inline-block;
+    color: white;
+    padding: 15px;
+}
+
+

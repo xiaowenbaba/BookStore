@@ -1,0 +1,123 @@
+body{
+    margin: 0px;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+}
+.showGoods{
+    width: 1024px;
+    height: 260px;
+    margin: auto;
+}
+.showGoodsTop{
+    width: 1024px;
+    height: 40px;
+}
+.showGoodsTop ul{
+    margin: 0px;
+}
+.showGoodsTop li{
+   float: left  ;
+    padding-right: 10px;
+}
+.showGoodsTop a{
+    line-height: 40px;
+    color: grey;
+}
+.showGoodsMiddle{
+    width: 1024px;
+    height: 260px;
+}
+.showGoodsRight{
+    width: 250px;
+    height: 260px;
+    float: left;
+    text-align: center;
+}
+.showGoodsLeft{
+    width: 750px;
+    height: 260px;
+    float: right;
+}
+.showGoodsName{
+    width: 700px;
+    height: 50px;
+}
+.showGoodsName a{
+    line-height: 50px;
+    color: black;
+    font-size: 15px;
+}
+.showGoodsAuthor{
+    width: 700px;
+    height: 50px;
+}
+.showGoodsAuthor a{
+    line-height: 50px;
+    color: grey;
+    padding-left: 4px;
+}
+.showGoodsE{
+    width: 700px;
+    height: 40px;
+}
+.showGoodsE a{
+    color: red;
+    line-height: 40px;
+}
+.showGoodsPrice{
+    width: 700px;
+    height: 40px;
+}
+.showGoodsBuy{
+    width: 700px;
+    height: 100px;
+}
+.showGoodsBuyRight{
+    width: 100px;
+    height:100px ;
+    float: left;
+    margin-right: 10px;
+}
+.showGoodsBuyRight input{
+    width: 60px;
+    height: 25px;
+    margin-top: 50px;
+    border: solid 1px  grey;
+    border-radius: 10px;
+    text-align: center;
+    color: grey;
+}
+.showGoodsBuyRight a{
+    display: inline-block;
+    width: 15px;
+    height: 25px;
+    background-color: whitesmoke;
+    color: grey;
+}
+.showGoodsBuyMiddle{
+    width: 150px;
+    height:100px ;
+    float: left;
+    margin-right: 10px;
+}
+.showGoodsBuyMiddle a{
+    display: inline-block;
+    margin-top: 48px;
+}
+
+.showGoodsBuyLeft{
+    width: 120px;
+    height:100px ;
+    float: left;
+    margin-right: 10px;
+}
+.showGoodsBuyLeft a{
+    display: inline-block;
+}
+.showGoodsMessage{
+    color: grey;
+}

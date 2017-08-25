@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.book.mapper.ShoppingCarMapper">
+
+	<insert id="insertShoppingCar" parameterType="com.book.dto.ShoppingCar" >
+		insert into shopping_car (user_id,book_id,Car_no) values(#{userId},#{bookId},#{carNo})
+	</insert>
+	<update id="updateShoppingCar" parameterType="com.book.dto.ShoppingCar" >
+		update shopping_car set Car_no=#{carNo}  where user_id = #{userId}  and book_id= #{bookId}
+	</update>
+	<select id="selectById" parameterType="com.book.dto.ShoppingCar" resultType="com.book.dto.ShoppingCar">
+		select user_id , book_id ,Car_no from shopping_car where user_id = #{userId}  and book_id= #{bookId}
+	</select>
+	<select id="selectByUser" parameterType="com.book.dto.Users" resultType="com.book.dto.ShoppingCar">
+		select * from shopping_car where user_id = #{userId}
+	</select>
+	
+	<select id="selectMassageByPage" parameterType="java.util.HashMap" resultType="com.book.dto.Common">
+	select bi.book_name,bi.book_Selling,bi.book_picture,bi.book_id,sc.Car_no,sc.data,sc.Car_id,sc.user_id from shopping_car sc ,book_information bi where bi.book_id = sc.book_id and sc.user_id=#{user.userId}
+	</select>
+	<delete id="delectById" parameterType="com.book.dto.ShoppingCar">
+		delete from shopping_car where car_id=${carId}
+	</delete>
+	<delete id="delectByUser" parameterType="com.book.dto.ShoppingCar">
+		delete from shopping_car where user_id = #{userId} and book_id = #{bookId}
+	</delete>
+	<select id="selectCount" parameterType="com.book.dto.ShoppingCar" resultType="java.lang.Integer">
+		
+		select count(*) from shopping_car where user_id = #{userId}
+	
+	</select>
+</mapper>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.book.mapper.UsersMapper">
+	<insert id="registerUser" parameterType="com.book.dto.Users">
+		insert into users  (user_name,user_password) values(#{userName},#{userPassword})
+	</insert>
+	<select id="selectNextId" resultType="java.lang.Integer">
+	
+		select max(user_id) from users
+	
+	</select>
+	<insert id="insertUserInfo" parameterType="java.lang.Integer">
+		insert into user_information (user_info_id) values(#{id})
+	
+	</insert>
+	<select id="loginUser" parameterType="com.book.dto.Users" resultType="com.book.dto.Users">
+		select user_id, user_name , user_password  from  users where user_name=#{userName} and  user_password= #{userPassword}
+	</select>
+	<update id="updateState" parameterType="com.book.dto.Users" >
+		update users set  user_state = #{userState} where user_id = #{userId}
+	</update>
+	<select id="selectByName" resultType="com.book.dto.Users" parameterType="com.book.dto.Users">
+			select user_id, user_name , user_password  from  users where user_name=#{userName}
+	</select>
+	
+	<select id="selectUserInfo" parameterType="java.lang.Integer" resultType="com.book.dto.Common">
+		select u.user_name,ui.Nick_Name,ui.sex,ui.user_tel,ui.school,ui.picture from users u,user_information ui where u.user_id = ui.user_info_id and u.user_id=#{id}
+	
+	</select>
+	<update id="updateUserInfoMessage" parameterType="com.book.dto.UserInformation">
+		update user_information set nick_name=#{nickName},user_tel=#{userTel},sex=#{sex},school=#{school} where user_info_id = #{userInfoId} 
+	</update>
+	
+	<update id="updatePassword">
+	
+		update users set user_password=#{userPassword} where user_id=#{userId}
+	
+	
+	</update>
+	<select id="loginBack" parameterType="com.book.dto.UsersBackstage" resultType="com.book.dto.UsersBackstage">
+		select users_backstage_id, sys_user_name , sys_user_password  from  users_backstage where sys_user_name=#{sysUserName} and  sys_user_password= #{sysUserPassword}
+	</select>
+	
+	<select id="BackselectByPage" parameterType="java.util.HashMap" resultType="com.book.dto.Common">
+	  select u.*,ui.nick_name,ui.user_tel from users u ,user_information ui  where u.user_id  = ui.user_info_id 
+		<if test="user.nickName!=null and !&quot;&quot;.equals(user.nickName.trim())">
+			and ui.nick_name like CONCAT('%', CONCAT(#{user.nickName}, '%'))
+		</if>
+		<if test="user.userInfoId!=null">
+			and ui.user_info_id =#{user.userInfoId}
+		</if>
+	</select>
+	
+	
+	
+	
+	
+	
+</mapper>

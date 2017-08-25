@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.book.mapper.GoodsEvaluationMapper">
+	<insert id="insertBybook" parameterType="com.book.dto.GoodsEvaluation">
+	
+		insert into goods_evaluation (book_id,user_id) values(#{bookId},#{userId})
+	
+	</insert>
+	
+	<select id="selectByUser" resultType="com.book.dto.GoodsEvaluation" parameterType="com.book.dto.GoodsEvaluation">
+		select  user_id ,evaluation_id,book_id from goods_evaluation where user_id = #{userId} and book_id = #{bookId}
+	</select>
+
+
+
+	<select id="selectEvaluationByPage" resultType="com.book.dto.Common" parameterType="java.util.HashMap">
+	
+	  select bi.* from  book_information bi,goods_evaluation ge where ge.book_id = bi.book_id and ge.user_id = #{evaluation.userId}
+	
+	</select>
+	
+	
+	<delete id="delectByid" parameterType="com.book.dto.GoodsEvaluation">
+	
+	delete from goods_evaluation where  book_id = #{bookId} and  user_id = #{userId}
+	
+	</delete>
+
+</mapper>

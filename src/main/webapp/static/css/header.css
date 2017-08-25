@@ -1,0 +1,95 @@
+body{
+    margin: 0px;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+}
+#headerContain{
+    width: 100%;
+    height: 180px;
+    background-color: snow;
+    border-bottom: solid 2px green;
+}
+#topContain a{
+    color: green;
+    line-height: 15px;
+}
+#topDivOne{
+    float: left;
+    width: 120px;
+    height: 50px;
+    padding-top: 15px;
+}
+#topDivRight ul{
+    margin-top: 4px;
+}
+#topDivRight li{
+    float: left;
+    padding: 10px;
+}
+#botoom{
+    margin: auto;
+    width: 1024px;
+    height: 130px;
+}
+#botoomOne{
+    width: 1024px;
+    height: 80px;
+}
+#botoomTwo{
+    width: 1024px;
+    height: 50px;
+}
+#botoomOneDiv{
+    width: 100px;
+    height: 80px;
+    text-align: center;
+    float: left;
+    margin-left: -120px
+}
+#botoomOneDiv a{
+    color: chartreuse;
+    font-size:  25px;
+
+}
+#botoomOneDiv2{
+    margin: auto;
+    width: 900px;
+    height: 80px;
+    float: left;
+}
+#botoomOneDiv2 li{
+    float: left;
+    line-height: 50px;
+    margin-left: 40px;
+}
+#botoomOneDiv2 li:hover{
+    background-color: lavender;
+}
+#botoomOneDiv2 li a{
+    color: brown;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+}
+#botoomTwoDiv{
+    width: 1024px;
+    margin: auto;
+    height: 50px;
+}
+#botoomOneDivsInput{
+    float: right;
+}
+#botoomOneDivsInput input{
+    width: 230px;
+    height: 30px;
+    border: solid 3px darkgreen;
+}
+#botoomOneDivsInput a{
+    color: white;
+    padding: 10px;
+    background-color: green;
+}

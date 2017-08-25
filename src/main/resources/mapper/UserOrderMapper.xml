@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.book.mapper.UserOrderMapper">
+	
+	<select id="selectCommonById" resultType="com.book.dto.Common" parameterType="com.book.dto.Common">
+		select book_id ,ISBN_id,book_name,book_author,book_price,book_Selling,
+		book_storage,Book_publish,book_picture,
+		book_degree ,book_type_id from  book_information   where book_id=#{bookId}	
+	</select>
+	
+	<insert id="insertOrder" parameterType="com.book.dto.UserOrder">
+			insert into user_order (user_id,order_address,tel,total_money,order_state,name,goods_no)
+			
+			values(#{userId},#{orderAddress},#{tel},#{totalMoney},'未付款',#{name},#{goodsNo})
+			
+	</insert>
+	
+	<select id="selectNextId" resultType="java.lang.Integer">
+		select max(order_id) from user_order
+	</select>
+	
+	<update id="updateById" parameterType="com.book.dto.UserOrder">
+		update user_order set order_state = #{orderState} where order_id=#{orderId}
+	
+	</update>
+	
+	
+	<select id="selectByUser" parameterType="com.book.dto.UserOrder" resultType="com.book.dto.UserOrder">
+	
+		select * from user_order where user_id = #{userId}
+	
+	</select>
+	
+	
+	<select id="BackOrderByPage" parameterType="java.util.HashMap" resultType="com.book.dto.UserOrder">
+	
+	select order_id,user_id, order_date ,order_address,tel,total_money,order_state,name,goods_no from user_order where 1=1
+	
+	<if test="userOrder.orderId!=null">
+		and order_id = #{userOrder.orderId}
+		
+	</if>
+	
+	<if test="userOrder.orderState!=null and !&quot;&quot;.equals(userOrder.orderState.trim())">
+	
+		and order_state like CONCAT('%', CONCAT(#{userOrder.orderState}, '%'))
+		
+	
+	</if>
+	
+	
+	
+	</select>
+	
+	
+</mapper>

@@ -1,0 +1,24 @@
+#leftContain{
+    width:200px;
+    height: 400px;
+}
+body{
+    margin: 0px;
+}
+ul{
+    margin: 0;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#leftContain>ul>li>a{
+    color: black;
+}
+#leftContain>ul>li{
+    margin-top: 10px;
+}
